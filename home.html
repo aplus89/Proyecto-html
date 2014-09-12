@@ -7,7 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Fotografias</title>
         <link rel="stylesheet" href="css/main.css">
+
         <style type="text/css">
+
             
             video {
                 position: fixed; 
@@ -18,18 +20,26 @@
                 width: auto; 
                 height: auto; 
                 z-index: -100;
-                background: url() no-repeat;
+                background: url(img/ella.jpg) no-repeat;
                 background-size: cover;
                 overflow: hidden;
+            }
+
+
+            div img{
+                top: 0px;
+                left: 0px;
+                min-width: 100%; 
+                min-height: 100%;
+                position: fixed;
+                z-index: -99;
+                background-size: cover;
             }
 
             *::-webkit-media-controls {
                 display: none !Important;
 
             }
-
-                       
-
 
         </style>
 <!--Nuestra Misión
@@ -42,22 +52,30 @@ Así mismo marcar una diferencia como prestadores de servicios, Seguir  luchando
 
     </head>
 <!--Titulo de la pagina principal, fondo con video usando etiqueta de video.-->
-    <body bgcolor="#98D7DB">
+    <body>
         <header>
             <font color="#fff" face="Helvetica">
-                <H1 style="font-size:500%">PHOTOGRAPHY
+                <H1 style="font-size:600%; margin:8% 0px 0px 3%">PHOTOGRAPHY
                 </H1>
-                <H2 style="font-family:Segoe UI; font-size:110%">by Mariela Alpizar
+                <H2 style="font-family:Segoe UI; font-size:140%; margin:0px 0px 0px 45%">by Mariela Alpizar
                 </H2>
             </font>
         </header>
 
-        <img src="img/img.png" width="30%" style="vertical-align:bottom">
+        <img src="img/img.png" width="30%" style="vertical-align:bottom; margin:20px 0px 0px 55%">
 
-        <video controls autoplay="true" muted="muted" loop="loop" controls="false">
-            <source src="video/studio.mp4#t=9,102" type="video/mp4" >
-        </video>
-
+        <div>
+            <img src="img/layer.png" width="100%">
+            <video controls autoplay="true" muted="muted" loop="loop" controls="false">
+                <source src="video/studio.mp4#t=9,102" type="video/mp4" >
+            </video>
+        </div>
     </body>
+
+    <frameset rows="100" frameborder="none" framespacing="3" border="10%" bordercolor="#FF9900">
+
+    <frame src="social.html" name="social" frameborder="no" scrolling="auto"></frame>
+
+    </frameset>
     
 </html>
