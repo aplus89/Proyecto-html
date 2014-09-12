@@ -61,6 +61,26 @@
                 font-weight: 100;
             }
 
+            #cut-diamond {
+                border-style: solid;
+                border-color: transparent transparent #DC1686 transparent;
+                border-width: 0 25px 25px 25px;
+                height: 0;
+                width: 50px;
+                position: relative;
+                margin: 20px 0 50px 0;
+            }
+            #cut-diamond:after {
+                content: "";
+                position: absolute;
+                top: 25px;
+                left: -25px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: #DC1686 transparent transparent transparent;
+                border-width: 70px 50px 0 50px;
+            }
 
         </style>
 
@@ -94,7 +114,21 @@
                     Tener mucha paciencia, saber escuchar.
                     </p>
             </font>
+            
+            <center>
+                <div id="cut-diamond">
+                </div>
+            </center>
         </div>
+        <!--Inserte al menos dos imagen que ilustre el tema en cada página, las imágenes deben aplicar los diferentes atributos que poseen las mismas.-->
+        <img src="img/ella.jpg" width="30%" alt="img" title="tomando fotos">
+
+        <img src="img/ella3.gif" width="30%" alt="tomando muchas fotos" title="tomando muchas fotos">
+
+        <img src="img/ella2.jpg" width="35%" alt="img" title="tomando fotos">
+        
+        
+
         <div>
             <!--imagen de colores relacionada con los colores de la pagina, sobre el video-->
             <img src="img/layer.png" width="100%">
