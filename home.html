@@ -6,11 +6,14 @@
         <meta name="description" content="Fotografias, imagenes, Mariela">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Fotografias</title>
-        <link rel="stylesheet" href="css/main.css">
+        <!--Estos son tipos de fuente importados desde google, para poder hacer que la pagina se vea mas elegante-->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:200,300,100' rel='stylesheet' type='text/css'>
 
+        <link href='http://fonts.googleapis.com/css?family=Roboto:100italic,400,300,100' rel='stylesheet' type='text/css'>
+
+        <!--Añadi un estilo en la misma pagina, para que pueda quedar como mi diseño-->
         <style type="text/css">
 
-            
             video {
                 position: fixed; 
                 right: 0; 
@@ -27,14 +30,19 @@
 
 
             div img{
-                top: 0px;
-                left: 0px;
-                min-width: 100%; 
-                min-height: 100%;
+                top: -10px;
+                left: -10px;
+                min-width: 110%; 
+                min-height: 110%;
                 position: fixed;
                 z-index: -99;
                 background-size: cover;
                 box-shadow: inset 0 0 0 9000px rgba(0,0,0,0.3);
+                -webkit-filter: blur(5px);
+                -moz-filter: blur(5px);
+                -o-filter: blur(5px);
+                -ms-filter: blur(5px);
+                filter: blur(5px);
             
             }
 
@@ -43,37 +51,65 @@
 
             }
 
+            h1 { 
+                font-family: 'Roboto', arial, serif;
+                font-weight: 300;
+            }
+
+            h2 {
+                font-family: 'Raleway', arial, serif;
+                font-weight: 100;
+            }
+
+
         </style>
-<!--Nuestra Misión
-Es brindar no solo un servicio de calidad, sino también original y personalizado para cada cliente.
-Manteniéndonos a la vanguardia en cuanto a equipo, tecnología y capacitación profesional; pero también aplicando creatividad y arte a nuestros Servicios, Creando producciones que no solo cautiven la vista, sino también cautiven los recuerdos y los sentimientos de los espectadores.
- 
-Nuestra Visión
-Seguir por el camino que nos lleva a brindarles un buen servicio a nuestros clientes,  logrando adquirir su preferencia al adquirir un servicio de calidad.
-Así mismo marcar una diferencia como prestadores de servicios, Seguir  luchando por estar fuera de el grupo de fotógrafos tradicionales, y ubicarnos dentro de un entorno que busca lo extraordinario y original.-->
 
     </head>
 <!--Titulo de la pagina principal, fondo con video usando etiqueta de video.-->
     <body>
         <header>
-            <font color="#fff" face="Helvetica">
-                <H1 style="font-size:600%; margin:8% 0px 0px 3%">PHOTOGRAPHY
-                </H1>
-                <H2 style="font-family:Segoe UI; font-size:140%; margin:0px 0px 0px 45%">by Mariela Alpizar
-                </H2>
+            <font color="#fff" face="Verdana, Sans Serif">
+                <h1 style="font-size:800%; margin:8% 0px 0px 3%">PHOTOGRAPHY
+                </h1>
+                <h2 style="font-size:280%; margin:0px 0px 0px 30%">by Mariela Alpizar
+                </h2>
             </font>
+            <!--logo transparente-->
+            <img src="img/img.png" width="25%" style="vertical-align:bottom; margin:-30% -10% -10% 55%">
         </header>
-        <!--logo transparente-->
-        <img src="img/img.png" width="30%" style="vertical-align:bottom; margin:20px 0px 0px 55%">
 
+        <!--Todas las páginas deben tener un título principal, tres subtítulos que traten sobre el tema, una línea divisoria y desarrollo de párrafos que expliquen el negocio. A los párrafos aplíqueles diferente estilo de <font>-->
+        <div style="margin:20% 20% 15% 15%">
+            <font  face="Verdana, Sans Serif, Helvetica" color="#74BE20">
+                <h2 style="margin:0px 0px 0px 1%">¿Qué son las fotografias?</h2>
+                    <p> 
+                        Las buenas <b>fotografias</b> se encuentran y son parte de la vida.
+                    </p>
+                <h2 style="margin:0px 0px 0px 1%">¿Fotógrafo, por qué?</h2>
+                    <p font-color="#F55152">
+                    Siempre me pareció mágico ver las fotografías, como una maquinita era capaz de copiar la realidad en el papel, en esa magia me sumergí y me quedé para siempre.
+                    </p>
+                <h2 style="margin:0px 0px 0px 1%">¿Qué se requiere para ser un fotógrafo?</h2>
+                    <p>
+                    Tener mucha paciencia, saber escuchar.
+                    </p>
+            </font>
+        </div>
         <div>
             <!--imagen de colores relacionada con los colores de la pagina, sobre el video-->
             <img src="img/layer.png" width="100%">
-            <video controls autoplay="true" muted="muted" loop="loop" controls="false">
+            <video controls autoplay="true" muted="muted" loop controls="false">
                 <!--fuente del video, debe iniciar en el segundo 9 y terminar en el segundo 102-->
                 <source src="video/studio.mp4#t=9,102" type="video/mp4" >
+                <source src="video/noche.mp4" type="video/mp4">
+                <source src="video/espacio.mp4" type="video/mp4">
+                <source src="video/juego.mp4" type="video/mp4">
             </video>
         </div>
+        
+        <font color="#fff" face="Roboto">
+            <marquee behavior="alternate">Gran promoción de foto albúm, comunicate con nosotros y visita nuestro estudio.
+        </font>
     </body>
     
 </html>
