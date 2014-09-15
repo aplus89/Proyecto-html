@@ -14,6 +14,11 @@
         <!--Añadi un estilo en la misma pagina, para que pueda quedar como mi diseño-->
         <style type="text/css">
 
+            body {
+                padding: 0;
+                margin-top:0;
+            }
+
             video {
                 position: fixed; 
                 right: 0; 
@@ -87,9 +92,10 @@
     </head>
 <!--Titulo de la pagina principal, fondo con video usando etiqueta de video.-->
     <body>
-        <header>
+        
+         <header>
             <font color="#fff" face="Verdana, Sans Serif">
-                <h1 style="font-size:800%; margin:8% 0px 0px 3%">PHOTOGRAPHY
+               <h1 style="font-size:800%; margin:8% 0 0 2%">PHOTOGRAPHY
                 </h1>
                 <h2 style="font-size:280%; margin:0px 0px 0px 30%">by Mariela Alpizar
                 </h2>
@@ -115,18 +121,27 @@
                     </p>
             </font>
             
-            <center>
-                <div id="cut-diamond">
-                </div>
-            </center>
+
         </div>
+    <center>
+            <div id="cut-diamond">
+            </div>
+    </center>
         <!--Inserte al menos dos imagen que ilustre el tema en cada página, las imágenes deben aplicar los diferentes atributos que poseen las mismas.-->
-        <img src="img/ella.jpg" width="30%" alt="img" title="tomando fotos">
-
-        <img src="img/ella3.gif" width="30%" alt="tomando muchas fotos" title="tomando muchas fotos">
-
-        <img src="img/ella2.jpg" width="35%" alt="img" title="tomando fotos">
-        
+    <center>
+        <table style="width:100%">
+            <tr>
+             
+                <img src="img/ella.jpg" alt="img" title="tomando fotos" height="100" width="100">
+            </tr>
+               
+                    <img src="img/ella3.gif" alt="tomando muchas fotos" title="tomando muchas fotos" height="100" width="100">
+               
+                    <img src="img/ella2.jpg" alt="img" title="tomando fotos" height="100" width="100">
+                
+            </tr>
+        </table>      
+    </center>        
         
 
         <div>
@@ -135,9 +150,7 @@
             <video controls autoplay="true" muted="muted" loop controls="false">
                 <!--fuente del video, debe iniciar en el segundo 9 y terminar en el segundo 102-->
                 <source src="video/studio.mp4#t=9,102" type="video/mp4" >
-                <source src="video/noche.mp4" type="video/mp4">
                 <source src="video/espacio.mp4" type="video/mp4">
-                <source src="video/juego.mp4" type="video/mp4">
             </video>
         </div>
         
@@ -145,5 +158,14 @@
             <marquee behavior="alternate">Gran promoción de foto albúm, comunicate con nosotros y visita nuestro estudio.
         </font>
     </body>
-    
+    <frameset rows="9%" frameborder="no" framespacing="0" border="0" bordercolor="#FF9900">
+        <!--frame de publicidad o banner de imagenes-->
+        <frame src="img.html" name="img" frameborder="no" scrolling="no" target="_self">
+        </frame>
+
+
+    </frameset>
+
+
+
 </html>
