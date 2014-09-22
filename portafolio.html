@@ -5,17 +5,74 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="Fotografias, imagenes, Mariela">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Llamar a Jquery para poder hacer el efecto de antes y despues en las fotografias-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+        </script>
         <title>Fotografias</title>
-        <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-        
+		<!--Estos son tipos de fuente importados desde google, para poder hacer que la pagina se vea mas elegante-->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:200,300,100' rel='stylesheet' type='text/css'>
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto:100italic,400,300,100' rel='stylesheet' type='text/css'>
+
+        <!--Añadi un estilo en la misma pagina, para que pueda quedar como mi diseño-->
+        <style type="text/css">
+        	.beforeAfterSlidebar {
+	  			position: relative;
+	  			width: 800px;
+	  			height: 600px;
+			}
+			
+			.beforeAfterSlidebar div {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				overflow: hidden;
+			}
+			
+			.topImage {
+				border-right: solid 4px black;
+			}
+
+
+        </style>
+
+   
     </head>
-        <body>
+        <body leftmargin="15%">
+        	<div style="height:100%; background-color:#4285BC; margin-top:-8%;margin-left:-5%;margin-right:5%; padding:5%;">
+        		<table>
+        			<td>
+        				<tr>
+        					<div class="beforeAfterSlidebar">
+    							<div class="bottomImage">
+    								<img src="http://upstairsweb.com/images/afterImage.jpg" width="800" height="600" alt="after" />
+    							</div>
+    							<div class="topImage">
+    								<img src="http://upstairsweb.com/images/beforeImage.jpg" width="800" height="600" alt="before" />
+    							</div>
+							</div>
+        				</tr>
+        			</td>
 
 
 
 
 
+
+
+        	</table>
 
         </body>
-    
+        <script type="text/javascript">
+        	$(".topImage").css('width', '50%');
+        	$(".beforeAfterSlidebar").mousemove(function(e) {
+      		// get the mouse x (horizontal) position and offset of the div
+    			var offset =  $(this).offset();
+    			var iTopWidth = (e.pageX - offset.left);
+
+			// set width of bottomimage div
+    		$(this).find(".topImage").width(iTopWidth);
+    		}
+  			);
+        </script>
 </html>
