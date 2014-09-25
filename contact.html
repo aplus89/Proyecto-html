@@ -11,6 +11,20 @@
 
         <link href='http://fonts.googleapis.com/css?family=Roboto:100italic,400,300,100' rel='stylesheet' type='text/css'>
 
+        <style type="text/css">
+        #googlemaps { 
+            height: 100%; 
+            width: 100%; 
+            position:absolute; 
+            top: 0; 
+            left: 0; 
+            z-index: -10; /* Set z-index to 0 as it will be on a layer below the contact form */
+        }
+
+
+
+        </style>
+
     </head>
 
     <body leftmargin="15%" link="#DC1686" alink="#DC1686" vlink="#fff" text-decoration="none">
@@ -19,17 +33,93 @@
             <h1 style="font-family: Roboto; font-weight: 100; font-size: 14em; margin-top: -5%">Contact</h1>
         </font>
 
-         <div style="height:100%; background-color:#4285BC; margin-top:-18%;margin-left:-5%;margin-right:2%; padding:5%;">
+         <div style="height:95%; background:rgba(66,133,188, 0.6); margin-top:-18%;margin-left:-5%;margin-right:2%; padding:5%;">
             
-            <font color="#fff" style="font-family: Roboto; font-weight: 200;">
+            <font color="#fff" style="font-family: Roboto; font-weight: 400;">
+                <!--Aquí puede haber un formulario donde se incluyen los siguientes campos:
+                Nombre:
+                Compañía:
+                País:
+                Dirección:
+                Teléfono:
+                Correo Electrónico:
+                Comentario:
+                Como nos encontro:
+                -->
+                <table>
+                    <tr>
+                        <td style="margin-left:5%;padding:5%;">
+                            <form action="mailto:quefueloquepaso@gmail.com" method="post" enctype="text/plain">
+                                <p>Nombre:</p>
+                                <input name="campo" type="text" value="Nombre" size="20" maxlength="50" >
+
+                                <p>Empresa:</p>
+                                <input name="campo" type="text" value="Empresa" size="20" maxlength="50" >
+
+                                <p>País:</p>
+                                <input name="campo" type="text" value="País" size="20" maxlength="50" >
+                        </td>
+
+                        <td style="margin-left:5%;padding:5%;">
+                                <p>Dirección:</p>
+                                <input name="campo" type="text" value="Adress" size="20" maxlength="50" >
+
+                                <p>Teléfono:</p>
+                                <input name="campo" type="text" value="Telefono" size="20" maxlength="50" >
+
+                                <p>Correo Electrónico:</p>
+                                <input name="campo" type="text" value="Correo" size="20" maxlength="50" >
+                        </td>
+                        <td style="margin-left:5%;padding:5%;">
+                                <p>Comentario:</p>
+                                <textarea name="Comment"  value="Comentanos" cols="30" rows="3" noresize>
+                                </textarea>
+
+
+                                <p>Como nos encontro:</p>
+                                <input name="campo" type="text" value="" size="20" maxlength="50" >
+
+                                <input name="boton" type="submit" value="Enviar">
+                            </form>
+                        </td>
+                    </tr>
+                </table>
             </font>
         </div>
-
-
-
-
-
-
+        <!--Mapa del lugar-->
+        <div id="googlemaps"></div>
     </body>
-    
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+ 
+<script type="text/javascript">
+ 
+    // The latitude and longitude of your business / place
+    var position = [9.974992, -84.198727];
+ 
+        function showGoogleMaps() {
+ 
+    var latLng = new google.maps.LatLng(position[0], position[1]);
+ 
+    var mapOptions = {
+        zoom: 12, // initialize zoom level - the max value is 21
+        streetViewControl: false, // hide the yellow Street View pegman
+        scaleControl: false, // allow users to zoom the Google Map
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        center: latLng
+    };
+ 
+    map = new google.maps.Map(document.getElementById('googlemaps'),
+        mapOptions);
+ 
+    // Show the default red marker at the location
+    marker = new google.maps.Marker({
+        position: latLng,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP
+    });
+}
+ 
+google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+</script>
 </html>
