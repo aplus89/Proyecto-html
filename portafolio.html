@@ -16,63 +16,55 @@
 
         <!--Añadi un estilo en la misma pagina, para que pueda quedar como mi diseño-->
         <style type="text/css">
-        	.beforeAfterSlidebar {
-	  			position: relative;
-	  			width: 800px;
-	  			height: 600px;
-			}
-			
-			.beforeAfterSlidebar div {
-				position: absolute;
-				top: 0px;
-				left: 0px;
-				overflow: hidden;
-			}
-			
-			.topImage {
-				border-right: solid 4px black;
-			}
-
 
         </style>
 
    
     </head>
-        <body leftmargin="15%">
-        	<div style="height:100%; background-color:#4285BC; margin-top:-8%;margin-left:-5%;margin-right:5%; padding:5%;">
-        		<table>
-        			<td>
-        				<tr>
-        					<div class="beforeAfterSlidebar">
-    							<div class="bottomImage">
-    								<img src="http://upstairsweb.com/images/afterImage.jpg" width="800" height="600" alt="after" />
-    							</div>
-    							<div class="topImage">
-    								<img src="http://upstairsweb.com/images/beforeImage.jpg" width="800" height="600" alt="before" />
-    							</div>
-							</div>
-        				</tr>
-        			</td>
+    <body leftmargin="15%" link="#DC1686" alink="#DC1686" vlink="#fff" text-decoration="none">
+
+        <font color="#4285BC" >
+            <h1 style="font-family: Roboto; font-weight: 100; font-size: 14em; margin-top: -5%">Portafolio</h1>
+        </font>
+
+         <div style="height:100%; background-color:#4285BC; margin-top:-18%;margin-left:-5%;margin-right:2%; padding:5%;">
+            <font color="#fff" style="font-family: Roboto; font-weight: 200;">
+                <table>
+                    <tr>
+                        <td>
+                            <p>Lorem</p>
+                        </td>
+
+                        <td>
+                            <p>Lorem2</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>Lorem</p>
+                        </td>
+
+                        <td>
+                            <p>Lorem2</p>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <p>Lorem</p>
+                        </td>
+                    </tr>
 
 
 
+                </table>
 
-
-
-
-        	</table>
-
-        </body>
+            </font>
+        </div>
+    </body>
         <script type="text/javascript">
-        	$(".topImage").css('width', '50%');
-        	$(".beforeAfterSlidebar").mousemove(function(e) {
-      		// get the mouse x (horizontal) position and offset of the div
-    			var offset =  $(this).offset();
-    			var iTopWidth = (e.pageX - offset.left);
 
-			// set width of bottomimage div
-    		$(this).find(".topImage").width(iTopWidth);
-    		}
-  			);
         </script>
 </html>

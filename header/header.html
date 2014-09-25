@@ -7,29 +7,61 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Fotografias</title>
 
+        <style type="text/css">
+
+        </style>
+
+
+
+        <script type="text/javascript">
+
+        function home () {
+
+            document.body.style.backgroundColor="#3C4FA2"
+
+            }
+
+        function green () {
+
+            document.body.style.backgroundColor="#74BE20"
+
+            }
+
+        function blue () {
+
+            document.body.style.backgroundColor="#4285BC"
+
+            }
+
+        function purple () {
+
+            document.body.style.backgroundColor="#DC1686"
+
+            }
+
+        </script>
+
     </head>
     <body bgcolor="#3C4FA2">
         <!--Hacer que el header sea de un color diferente en cada pagina-->
         <header style="margin:0px;padding:0px;">
             <!--Los botones deben estar siempre en todas las paginas y debe el logo estar en el lado izquiero y los botones al derecho, todo dentro del margen, usar ../ cuando los documentos o archivos se encuentran en una carpeta hermana y no en la misma carpeta.-->
-            <a href="../home.html" target="home">
+            <a href="../home.html" target="home" onClick="home()">
                 <img src="../img/logo.png" align="left" height="48" width="74"  style="margin:0 0 0 6%;padding:6px;" alt="LOGO" >
  
             </a>
 
-            <a href="../contact.html" target="home">
+            <a href="../contact.html" target="home"onClick="purple()">
                 <img src="../img/contact.png" style="margin:3px;padding:5px;" align="right" height="40px" width="102px">
             </a>
 
-
-            <a href="../portafolio.html" target="home">
+            <a href="../portafolio.html" target="home" onClick="blue()">
                 <img src="../img/folio.png" style="margin:3px;padding:5px;" align="right" height="40" width="112">
             </a>
 
-            <a href="../about.html" target="home">
-                <img src="../img/about.png" style="margin:3px;padding:5px;" align="right" height="40" width="92">
+            <a href="../about.html" target="home" onClick="green()">
+                <img src="../img/about.png" style="margin:3px;padding:5px;" align="right" height="40" width="92" id="c1" >
             </a>
-
 
         </header>
 
